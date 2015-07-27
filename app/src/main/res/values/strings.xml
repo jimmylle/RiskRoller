@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">RiskRoller</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="defense">Defense</string>
+    <string name="subtract">-</string>
+    <string name="offense">Offense</string>
+    <string name="add">+</string>
+    <string name="initial_dice_number">0</string>
     <string name="action_settings">Settings</string>
 </resources>
