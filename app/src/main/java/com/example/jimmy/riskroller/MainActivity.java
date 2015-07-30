@@ -7,12 +7,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private int defenseDiceAmount = 0;
     private int offenseDiceAmount = 0;
 
+    public void rollResults(View view) {
+        setDefenseResults();
+        setOffenseResults();
+    }
 
     public void decreaseDefenseDice(View view) {
         if (defenseDiceAmount <= 1) {
@@ -44,6 +50,49 @@ public class MainActivity extends AppCompatActivity {
         }
         offenseDiceAmount += 1;
         setOffenseDiceAmount();
+    }
+
+    private void setDefenseResults() {
+        Random rand = new Random();
+        int rand1 = rand.nextInt(6) + 1;
+        int rand2 = rand.nextInt(6) + 1;
+        TextView defenseview1 = (TextView) findViewById(R.id.defense_first_number);
+        TextView defenseview2 = (TextView) findViewById(R.id.defense_second_number);
+        if (defenseDiceAmount == 0) {
+            return;
+        } else if (defenseDiceAmount == 1) {
+            defenseview1.setText(Integer.toString(rand1));
+            defenseview2.setText(Integer.toString(0));
+        } else {
+            defenseview1.setText(Integer.toString(rand1));
+            defenseview2.setText(Integer.toString(rand2));
+        }
+
+    }
+
+    private void setOffenseResults() {
+        Random rand = new Random();
+        int rand1 = rand.nextInt(6) + 1;
+        int rand2 = rand.nextInt(6) + 1;
+        int rand3 = rand.nextInt(6) + 1;
+        TextView offenseview1 = (TextView) findViewById(R.id.offense_first_number);
+        TextView offenseview2 = (TextView) findViewById(R.id.offense_second_number);
+        TextView offenseview3 = (TextView) findViewById(R.id.offense_third_number);
+        if (offenseDiceAmount == 0) {
+            return;
+        } else if (offenseDiceAmount == 1) {
+            offenseview1.setText(Integer.toString(rand1));
+            offenseview2.setText(Integer.toString(0));
+            offenseview3.setText(Integer.toString(0));
+        } else if(offenseDiceAmount == 2) {
+            offenseview1.setText(Integer.toString(rand1));
+            offenseview2.setText(Integer.toString(rand2));
+            offenseview3.setText(Integer.toString(0));
+        } else {
+            offenseview1.setText(Integer.toString(rand1));
+            offenseview2.setText(Integer.toString(rand2));
+            offenseview3.setText(Integer.toString(rand3));
+        }
     }
 
     private void setDefenseDiceAmount() {

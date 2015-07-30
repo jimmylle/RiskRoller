@@ -4,6 +4,7 @@
     <string name="subtract">-</string>
     <string name="offense">Offense</string>
     <string name="add">+</string>
+    <string name="roll">Roll</string>
     <string name="results">Results</string>
     <string name="initial_dice_number">0</string>
     <string name="action_settings">Settings</string>

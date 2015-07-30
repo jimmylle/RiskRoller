@@ -33,7 +33,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="16dp"
                         android:text="@string/defense"
-                        android:textSize="24sp" />
+                        android:textSize="32sp" />
 
                     <TextView
                         android:id="@+id/defense_dice_amount"
@@ -42,7 +42,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="16dp"
                         android:text="@string/initial_dice_number"
-                        android:textSize="50sp" />
+                        android:textSize="40sp" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="16dp"
                         android:text="@string/offense"
-                        android:textSize="24sp" />
+                        android:textSize="32sp" />
 
                     <TextView
                         android:id="@+id/offense_dice_amount"
@@ -89,7 +89,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="16dp"
                         android:text="@string/initial_dice_number"
-                        android:textSize="50sp" />
+                        android:textSize="40sp" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -116,6 +116,13 @@
 
             </LinearLayout>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/roll"
+                android:onClick="rollResults"
+                android:layout_marginTop="16dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -139,9 +146,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="16dp"
                         android:text="@string/initial_dice_number"
-                        android:textSize="48sp" />
+                        android:textSize="40sp" />
 
                     <TextView
                         android:id="@+id/defense_second_number"
@@ -149,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/initial_dice_number"
-                        android:textSize="48sp" />
+                        android:textSize="40sp" />
 
                 </LinearLayout>
 
@@ -164,18 +171,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="16dp"
                         android:text="@string/initial_dice_number"
-                        android:textSize="48sp" />
+                        android:textSize="40sp" />
 
                     <TextView
                         android:id="@+id/offense_second_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginBottom="16dp"
                         android:text="@string/initial_dice_number"
-                        android:textSize="48sp" />
+                        android:textSize="40sp" />
 
                     <TextView
                         android:id="@+id/offense_third_number"
@@ -183,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="@string/initial_dice_number"
-                        android:textSize="48sp" />
+                        android:textSize="40sp" />
 
                 </LinearLayout>
 
