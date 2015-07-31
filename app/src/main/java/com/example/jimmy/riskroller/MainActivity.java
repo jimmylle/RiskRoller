@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         Random rand = new Random();
         int rand1 = rand.nextInt(6) + 1;
         int rand2 = rand.nextInt(6) + 1;
+        rand1 = Math.max(rand1, rand2);
+        rand2 = Math.min(rand1,rand2);
         TextView defenseview1 = (TextView) findViewById(R.id.defense_first_number);
         TextView defenseview2 = (TextView) findViewById(R.id.defense_second_number);
         if (defenseDiceAmount == 0) {
@@ -67,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
             defenseview1.setText(Integer.toString(rand1));
             defenseview2.setText(Integer.toString(rand2));
         }
-
     }
 
     private void setOffenseResults() {
@@ -75,23 +76,29 @@ public class MainActivity extends AppCompatActivity {
         int rand1 = rand.nextInt(6) + 1;
         int rand2 = rand.nextInt(6) + 1;
         int rand3 = rand.nextInt(6) + 1;
+
+        int max = Math.max(rand1,Math.max(rand2,rand3));
+        int min = Math.min(rand1, Math.min(rand2, rand3));
+        int mid = ((rand1 + rand2 +rand3) - (max + min));
+
         TextView offenseview1 = (TextView) findViewById(R.id.offense_first_number);
         TextView offenseview2 = (TextView) findViewById(R.id.offense_second_number);
         TextView offenseview3 = (TextView) findViewById(R.id.offense_third_number);
+
         if (offenseDiceAmount == 0) {
             return;
         } else if (offenseDiceAmount == 1) {
-            offenseview1.setText(Integer.toString(rand1));
+            offenseview1.setText(Integer.toString(max));
             offenseview2.setText(Integer.toString(0));
             offenseview3.setText(Integer.toString(0));
         } else if(offenseDiceAmount == 2) {
-            offenseview1.setText(Integer.toString(rand1));
-            offenseview2.setText(Integer.toString(rand2));
+            offenseview1.setText(Integer.toString(max));
+            offenseview2.setText(Integer.toString(mid));
             offenseview3.setText(Integer.toString(0));
         } else {
-            offenseview1.setText(Integer.toString(rand1));
-            offenseview2.setText(Integer.toString(rand2));
-            offenseview3.setText(Integer.toString(rand3));
+            offenseview1.setText(Integer.toString(max));
+            offenseview2.setText(Integer.toString(mid));
+            offenseview3.setText(Integer.toString(min));
         }
     }
 
